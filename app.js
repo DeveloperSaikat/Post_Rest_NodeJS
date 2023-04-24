@@ -33,7 +33,7 @@ app.use((error, req, res, next) => {
 })
 
 mongoose.connect(
-    'mongodb+srv://saikatdevworks:cJQjt0HhOoxexSf6@test-cluster.kfa5qnw.mongodb.net/post?w=majority'
+    '#'
 )
 .then(res => {
     app.listen(8080);

@@ -1,5 +1,0 @@
-::1 - - [27/Apr/2023:11:15:02 +0000] "GET /feed/posts HTTP/1.1" 401 31 "-" "PostmanRuntime/7.31.3"
-::1 - - [27/Apr/2023:11:19:30 +0000] "PUT /auth/signup HTTP/1.1" 422 178 "-" "PostmanRuntime/7.31.3"
-::1 - - [27/Apr/2023:11:19:41 +0000] "PUT /auth/signup HTTP/1.1" 201 75 "-" "PostmanRuntime/7.31.3"
-::1 - - [27/Apr/2023:11:21:36 +0000] "PUT /auth/signup HTTP/1.1" 201 75 "-" "PostmanRuntime/7.31.3"
-::1 - - [27/Apr/2023:11:22:00 +0000] "PUT /auth/signup HTTP/1.1" 201 75 "-" "PostmanRuntime/7.31.3"

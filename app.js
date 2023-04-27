@@ -1,12 +1,25 @@
+const path = require('path');
+const fs = require('fs');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+const helmet = require('helmet');
 
 const feedRoutes = require('./routes/feeds');
 const authRoutes = require('./routes/auth');
 const { error } = require('console');
 
 const app = express();
+
+const accessLogStream = fs.createWriteStream(
+    path.join(__dirname, 'access.log'),
+    {flags: 'a'}
+);
+
+app.use(helmet());
+app.use(morgan('combined', {stream: accessLogStream}));
 
 app.use(bodyParser.json());
 
@@ -33,7 +46,7 @@ app.use((error, req, res, next) => {
 })
 
 mongoose.connect(
-    '#'
+    'mongodb+srv://saikatdevworks:cJQjt0HhOoxexSf6@test-cluster.kfa5qnw.mongodb.net/post?w=majority'
 )
 .then(res => {
     app.listen(8080);
